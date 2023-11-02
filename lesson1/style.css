@@ -1,0 +1,24 @@
+body {
+    background-image: url('photo/menu.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+  }
+  
+div{
+    display: block;
+    background-color: rgb(83, 192, 196);
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+     
+}
+.food{
+    background: skyblue;
+    width: 380px;
+    height: auto;
+}

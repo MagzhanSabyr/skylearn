@@ -1,0 +1,32 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+    
+div{
+    width: 100%;
+    height: 33.33vh;
+}
+.textFood{
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding-top: 110px;
+}
+.et{
+    background-image: url('photo/et/et1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.bauyrsaq{
+    background-image: url('photo/bauyrsaq/photo1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.quyrdaq{
+    background-image: url('photo/quyrdaq/quyrdaq2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
