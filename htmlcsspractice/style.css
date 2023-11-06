@@ -1,0 +1,31 @@
+::root{
+    --primary-color: #164863;
+    --secondary-color: #FF69B4;	
+    ---color: #FF1493;	
+    --snow-color: #00FF00;	
+}
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+.car-img{
+    border-radius: 15px 15px 0px 0px;
+}
+
+.card-body{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.card-price{
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.card hr{
+    
+}
+
+
