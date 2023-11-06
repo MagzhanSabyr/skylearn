@@ -1,0 +1,40 @@
+.nav li:nth-child(1) a{
+    color:blueviolet
+}
+
+.nav li:nth-child(2) a {
+    color: black;
+}
+h1{
+    padding: 30px;
+    text-align: center;
+}
+.main{
+    background-color: #ffe6cc;
+
+}
+.comments{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+.comment{
+    border: 1px solid black;
+    border-radius: 6px;
+}
+.comment-author{
+    background-color: #ffa64d;
+    padding: 15px 15px 15px;
+    color:  black;
+}
+.comment-description{
+    padding: 15px 15px 15px;
+    background-color: white;
+
+}
+
+
+
+
+

@@ -1,18 +1,54 @@
+<!-- 
+Разработайте мини-посадочную страницу для ресторана:
+
+Блоки:
+1. Шапка страницы
+2. Главный блок
+3. Блок с меню
+4. Блок с отзывами
+5. Подвал страницы
+
+Требования:
++ В шапке страницы слева должен быть логотип компании
++ В шапке страницы должны быть названия блоков (Главное, Меню, Отзывы)
++ В шапке страницы справа должна быть кнопка “Заказать”
++ В главном блоке на заднем фоне должна быть затемненная фотография ресторана, титул, описание и кнопка “Заказать”
++ Сделайте сайт адаптивным под мобильное приложение -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Sandyq</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>BakeryCafeJAVA</title>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <a href="/"><img src="images/Java-logo.png" alt=""></a>
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="/"><img src="images/Java-logo.png" alt="logo" /></a>
+                </div>
+                <ul class="nav">
+                    <li><a href="/"></a>Main</li>
+                    <li><a href="pages/menu.html"></a>Menu</li>
+                    <li><a href="pages/reviews.html"></a>Reviews</li>
+                </ul>
+                <div><button>Order</button></div>
             </div>
         </div>
     </header>
+    <main class="main">
+        <div class="banner">
+            <div class="layout">
+                <h1>BakeryCafeJAVA</h1>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">Order now!</footer>
 </body>
+
 </html>
