@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar-nav{
+    margin-left: 50px;
+}
+
+.navbar-right-buttons .btn-outline-primary {
+    margin-right: 10px;
+}
+.wolt-active{
+    color: black
+}
+.text-for-sort{
+    color: blue
+}
+
+.card:hover{
+    transform: scale(1.02);
+    transition: 0.4s
+}
+.card-body .text-description{
+    font-size: 0.7rem;
+}
+.footer{
+    background-color: rgb(43, 42, 42);
+    width: 100%;
+    height: auto;
+}
+.text-main{
+    font-size: 14px;
+    color: gray;
+    margin-top: 15px;
+    margin-bottom: 15px ;
+}
+.text-notmain{
+    font-size: 12px;
+    color:white;
+    margin-top: 3px;
+    margin-bottom: 3px ;
+}

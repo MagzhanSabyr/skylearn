@@ -1,0 +1,285 @@
+<!-- 
+    Разработайте прототип веб-сайта Wolt:
+
+Главная страница
+Референс: https://wolt.com/ru/kaz/almaty/restaurants
++ Добавьте мин. 9 видов категории (не кликабельные)
++ Добавьте мин. 6 вида ресторана (кликабельные)
+
+Детальная информация ресторана
+Референс: https://wolt.com/ru/kaz/almaty/restaurant/lanzhou-shevchenko
++ Добавьте мин. 3 вида категории блюда (на каждый ресторан)
++ При нажатии на категорию страница должна спуститься на нужную категорию
++ Добавьте мин. 3 вида блюда на каждую категорию
++ При нажатии на блюдо должно всплыть модальное окно с детальной информацией о блюде
+
++ Сделайте сайт адаптивным под мобильное приложение 
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>WoltHomework</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg border-bottom">
+        <div class="container">
+            <img src="img/Wolt_logo_black.png" alt="Logo" height="24" class="d-inline-block align-text-top">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Almaty</a>
+                    </li>
+                </ul>
+                <div class="navbar-right-buttons d-flex" role="search">
+                    <button class="btn btn-outline-primary" type="submit">Войти</button>
+                    <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <ul class="nav justify-content-center mt-4">
+        <li class="nav-item">
+            <a class="nav-link disabled wolt-inactive" aria-current="page" href="#">Рекомендации</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn-primary rounded-pill wolt-active" href="#">Рестораны</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled wolt-inactive" aria-disabled="true">Магазины</a>
+        </li>
+    </ul>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-6 fw-bold">Рестораны поблизости</h1>
+            </div>
+            <div class="col text-sm-end mt-4 text-for-sort">
+                <p class="text-xxs">Сортировка по Рекомендованные</p>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-9">
+                <h4 class="fw-bold">Категории</h4>
+            </div>
+            <div class="col-3 text-center">
+                <div class="btn-group">
+                    <button class="btn btn-primary btn-sm rounded-circle">
+                        <span>&larr;</span>
+                    </button>
+                    <button class="btn btn-primary btn-sm rounded-circle">
+                        <span>&rarr;</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container mt-3 ">
+        <div class="row justify-content-center">
+            <div class="col-sm-6 col-md-4 col-lg-2 mx-0.1 mb-3">
+                <div class="card" style="width: 14rem;">
+                    <img src="img/burger.png" class="card-img-top" style="height: 215px;" alt="...">
+                    <div class="card-body shadow-lg">
+                        <p class="card-text fw-bold">Бургер</p>
+                        <p class="text-description text-sm">142 заведений</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 mx-0.1 mb-3">
+                <div class="card" style="width: 14rem;">
+                    <img src="img/pizza.png" class="card-img-top" style="height: 215px;" alt="...">
+                    <div class="card-body shadow-lg">
+                        <p class="card-text fw-bold">Пицца</p>
+                        <p class="text-description text-sm">152 заведений</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 mx-0.1 mb-3">
+                <div class="card" style="width: 14rem;">
+                    <img src="img/desert.png" class="card-img-top" style="height: 215px;" alt="...">
+                    <div class="card-body shadow-lg">
+                        <p class="card-text fw-bold">Десерты</p>
+                        <p class="text-description text-sm">93 заведений</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 mx-0.1 mb-3">
+                <div class="card" style="width: 14rem;">
+                    <img src="img/breakfast.png" class="card-img-top" style="height: 215px;" alt="...">
+                    <div class="card-body shadow-lg">
+                        <p class="card-text fw-bold">Завтраки</p>
+                        <p class="text-description text-sm">97 заведений</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 mx-0.1 mb-3">
+                <div class="card" style="width: 14rem;">
+                    <img src="img/Salads.png" class="card-img-top" style="height: 215px;" alt="...">
+                    <div class="card-body shadow-lg">
+                        <p class="card-text fw-bold">Салаты</p>
+                        <p class="text-description text-sm">116 заведений</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 mx-0.1">
+                <div class="card" style="width: 14rem;">
+                    <img src="img/soups.png" class="card-img-top" style="height: 215px;" alt="...">
+                    <div class="card-body shadow-lg">
+                        <p class="card-text fw-bold">Супы</p>
+                        <p class="text-description text-sm">88 заведений</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-9">
+                <h4 class="fw-bold">Все рестораны</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3 mb-4 ">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-0.3">
+                <a href="pages/restoran.html">
+                    <div class="card shadow-lg mb-3" style="width: 24rem;">
+                        <img src="img/lagmanchilk.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text fw-bold">Lagmanchik</p>
+                            <p class="text-description text-sm">Просто ВКУСНО</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-0.3">
+                <div class="card shadow-lg" style="width: 24rem;">
+                    <img src="img/jasylcoffee.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Jasyl Coffee</p>
+                        <p class="text-description text-sm">Матча кофе</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-0.3">
+                <div class="card shadow-lg" style="width: 24rem;">
+                    <img src="img/kachgar.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Кашгар</p>
+                        <p class="text-description text-sm">Вкуснейший Лагман по доступным ценам</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-0.3">
+                <div class="card shadow-lg" style="width: 24rem;">
+                    <img src="img/bubble.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Bubble</p>
+                        <p class="text-description text-sm">Вкусно и стильно</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-0.3">
+                <div class="card shadow-lg" style="width: 24rem;">
+                    <img src="img/granatkitchen.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Granat Kitchen</p>
+                        <p class="text-description text-sm">Восточная Кухня</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-0.3">
+                <div class="card shadow-lg" style="width: 24rem;">
+                    <img src="img/etet.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Et Et</p>
+                        <p class="text-description text-sm">Невероятно вкусно,быстро и доступно</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-sm-start p-4">
+                <div class="col-sm-6 col-md-4 col-lg-2 mx-0.3">
+                    <img src="https://logo-base.com/logo/wolt_delivery_logo_blue.png" style="width: 70px;" alt="">
+                    <br>
+                    <img src="https://static.tildacdn.com/tild3739-3835-4336-a133-353964653365/download-from-app-st.png"
+                        style="width: 70px;" alt="">
+                    <br>
+                    <img src="https://static.tildacdn.com/tild6437-3762-4434-b230-393965623563/gp.png"
+                        style="width: 70px;" alt="">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mx-0.3">
+                    <p class="text-main">Партнерство с Wolt</p>
+                    <p class="text-notmain">Курьерам</p>
+                    <p class="text-notmain">Для ресторанов</p>
+                    <p class="text-notmain">Для магазинов</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mx-0.3">
+                    <p class="text-main">Компания</p>
+                    <p class="text-notmain">О нас</p>
+                    <p class="text-notmain">Вакансии</p>
+                    <p class="text-notmain">Устойчивое развитие</p>
+                    <p class="text-notmain">Безопасность</p>
+                    <p class="text-notmain">Инвесторам</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mx-0.3">
+                    <p class="text-main">Продукты</p>
+                    <p class="text-notmain">Wolt Drive</p>
+                    <p class="text-notmain">Wolt Market</p>
+                    <p class="text-notmain">Wolt+</p>
+                    <p class="text-notmain">Для компаний</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mx-0.3">
+                    <p class="text-main">Полезные ссылки</p>
+                    <p class="text-notmain">Поддержка</p>
+                    <p class="text-notmain">Медиа</p>
+                    <p class="text-notmain">Контакты</p>
+                    <p class="text-notmain">Speak up</p>
+                    <p class="text-notmain">Промокоды</p>
+                    <p class="text-notmain">Developers</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mx-0.3">
+                    <p class="text-main">Следите за нами</p>
+                    <p class="text-notmain">Блог</p>
+                    <p class="text-notmain">Блог инженеров</p>
+                    <p class="text-notmain">Instagram</p>
+                    <p class="text-notmain">Facebook</p>
+                    <p class="text-notmain">Twitter</p>
+                    <p class="text-notmain">LinkedIn</p>
+                    <p class="text-notmain">Wolt Life</p>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+</html>
