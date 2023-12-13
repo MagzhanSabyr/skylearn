@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+<h1>My students:</h1>
+
+<ul>
+    {% for name in names %}
+        <li>{{ name }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
