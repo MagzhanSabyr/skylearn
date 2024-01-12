@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+<a class = "btn btn-primary mt-5" href="{{ url_for('index') }}">Back to home</a>
+<hr>
+<a class = "btn btn-success" href="{{ url_for('update', id=profile.get('id')) }}">Update</a>
+<h1>{{ profile.get("id") }}:{{ profile.get("login") }}</h1>
+<h2>Money: {{ profile.get("money") }}</h2>
+
+
+{% endblock %}

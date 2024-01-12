@@ -1,0 +1,30 @@
+body{
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer img{
+    height: 30px;
+    width: 30px;
+    margin-right:5px;
+  }
+  a{
+    text-decoration:none;
+    color: white;
+  }
+  
+  footer{
+      bottom: 0; 
+      width: 100%;
+  }
+  
+  #userProfile ul {
+      list-style: none;
+      padding: 0;
+  }
+  
+  #userProfile li {
+      margin-bottom: 15px;
+    padding-left:15px;
+      /* Расстояние между элементами списка */
+  }

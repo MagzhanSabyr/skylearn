@@ -1,0 +1,53 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Style for the search input */
+#searchInput {
+    width: 70%;
+}
+
+/* Style for the user cards */
+.user-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Highlight user cards on hover */
+.user-card:hover {
+    background-color: #f9f9f9;
+}
+
+/* Responsive styling for user cards */
+@media (max-width: 576px) {
+    #searchInput {
+        width: 100%;
+    }
+}

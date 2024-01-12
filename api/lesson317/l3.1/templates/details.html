@@ -1,0 +1,15 @@
+{%extends "base.html" %}
+
+{% block content %}
+
+    <a href="{{url_for('index') }}">Back</a>
+    <br>
+    <h1> {{profile.get("id") }}: {{ profile.get("login") }} </h1>
+    <hr>
+    <h2>Account: {{ profile.get("account")}}</h2>
+
+    
+{% endblock  %}
+
+
+

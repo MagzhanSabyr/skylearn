@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+
+{% block content %}
+  <a class="btn btn-warning" href="{{ url_for('create') }}">Create</a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>LOGIN</th>
+        <th>MONEY</th>
+      </tr>
+    </thead>
+    <thead>
+    {%for profile in profiles%}
+        <tr>
+          <td>{{ profile.get("id")}}</td>
+          <td>{{ profile.get("login")}}</td>
+          <td>{{ profile.get("money")}}</td>
+          <td>
+            <a class = "btn btn-primary" href="{{ url_for('details', id = profile.get('id')) }}">Details</a>
+            <a class = "btn btn-success" href="{{ url_for('update', id = profile.get('id')) }}">Update</a>
+            <a class = "btn btn-danger" href="{{ url_for('delete', id = profile.get('id')) }}">Delete</a>
+          </td>
+        </tr>
+    {%endfor%}
+    </thead>
+{% endblock %}
+
+
+

@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+<form method="POST">
+  <input class="form-control mt-4" name="id" type="number" value="{{ profile.get('id') }}" readonly>
+  <input class = "form-control" name="login" type="text" value="{{ profile.get('login') }}">
+  <input class = "form-control" name="money" type="number" value="{{ profile.get('money') }}">
+  <input class = "form-control btn btn-success" type="submit" value="Submit">
+</form>
+
+<a class = "btn btn-primary" href="{{ url_for('index') }}">Back to home</a>
+<h1>{{ profile.get("id") }}:{{ profile.get("login") }}</h1>
+<h2>Account: {{ profile.get("money") }}</h2>
+
+
+{% endblock %}

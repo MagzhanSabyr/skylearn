@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+
+{% block content %} {{super()}}
+<div class="row">
+    {%for el in data %}
+    <div class="col-xl-4 col-lg-4 col-md-2 col-sm-12 col-12">
+        <div class="card" style="width: 18rem">
+            <img src="{{el.fileInput}}" class="card-img-top" alt="{{el.postTitle}}" />
+            <div class="card-body">
+                <h5 class="card-title">{{el.postTitle}}</h5>
+                <p class="card-text">{{el.postText}}</p>
+                <a href="/update/{{el.id}}" class="btn btn-warning">Edit</a>
+                <a href="/delete/{{el.id}}" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+{% endblock %}

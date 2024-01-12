@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Magzhan",
+        "account": 2000
+    },
+    {
+        "id": 2,
+        "name": "Nurlan",
+        "account": 2000
+    },
+    {
+        "id": 3,
+        "name": "Kiril",
+        "account": 2000
+    },
+    {
+        "id": 154004,
+        "name": "Jony",
+        "account": "1234"
+    },
+    {
+        "id": 146172,
+        "name": "Loki",
+        "account": "123412"
+    },
+    {
+        "id": 147772,
+        "name": "Kira",
+        "account": "123000"
+    }
+]

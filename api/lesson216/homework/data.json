@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Almas",
+        "login": "almas@mail.ru"
+    },
+    {
+        "id": 2,
+        "name": "Petr",
+        "login": "petr@mail.ru"
+    },
+    {
+        "id": 3,
+        "name": "Liza",
+        "login": "liza@mail.ru"
+    },
+    {
+        "id": 4,
+        "name": "Lilo",
+        "login": "lilo@mail.ru"
+    },
+    {
+        "id": 34653,
+        "name": "Magnus",
+        "login": "magnus@mail.ru"
+    }
+]

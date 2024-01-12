@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %} {{super()}}
+<form id="create-form" action="/create" method="POST">
+    <label
+        >enter title:<input
+            class="form-control"
+            type="text"
+            placeholder="title"
+            id="postTitle"
+            name="postTitle" /></label
+    ><label
+        >load photo<input
+            class="form-control"
+            type="file"
+            placeholder="photo"
+            id="fileInput"
+            name="fileInput" /></label
+    ><label
+        >enter description<input
+            class="form-control"
+            type="text"
+            placeholder="description"
+            id="postText"
+            name="postText"
+        />
+    </label>
+    <input type="submit" value="submit" class="btn btn-success" />
+    <input type="reset" value="reset" class="btn btn-warning" />
+</form>
+<style>
+    form label {
+        display: block;
+        width: 400px;
+    }
+    form label:nth-child(3) {
+        margin-bottom: 15px;
+    }
+</style>
+{% endblock %}
